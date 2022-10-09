@@ -1,6 +1,5 @@
 # You need to use pi (3.14) r^2 to calcualte a cirlce area 
 
-
 pi = 3.14
 result = 0
 radius = -1
