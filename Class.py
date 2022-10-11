@@ -42,6 +42,11 @@
 #
 # this is a simple class that allows you to store family names and print them out calling the class member printFamily()
 # so in order to use this class you need to initialize it. 
+# there are two special methods in class, they are the constructor and destructor. 
+#   The constructor you can see here __init__class(self, parameters)
+#   all methods take self since it is the object referencing it's self. 
+#   you usually create a constructor to send preliminary data to the object once it is created. 
+
 # remember a class is a blueprint on how to create an object. It has not been created yet in our program until we use the blueprint to create it. 
 # so in our program we will type the following:
 # brothers = ["philip", "man", "big salmon"]
