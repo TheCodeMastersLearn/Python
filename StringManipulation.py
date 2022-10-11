@@ -10,12 +10,6 @@
     # fullname = "james is the cool"
     # replaced = fullname.replace("cool", "coolest")
 
-# it can also be used to strip away parts of the string incase you only want certain information 
-    # "james, marshall, 24, male" -> "james marshall 24 male"
-    # this is called stripping, you can use the variable.strip() function for this.
-    # fullname = "james, marshall, 24, male"
-    # strippedNames = fullname.strip(",")
-
 # you can also split strings -> "james philip" -> "james", "philip"
     # this is called splitting, you can use the variable.split() function to split strings. 
     # fullname =  "james philip" 
@@ -24,17 +18,31 @@
 
 # now ask the user for their full name and their age.
 
+username = input("Enter fullname and age. For Example: Juan Carpinteyro 27 ")
 
 # ask them for a comma seperated list of three of their family members firstnames and their ages (like this : philip 22, james 24, sarah 100)
 
+family_information = input("Enter a list 3 of Family members and their ages separted by commas like: Juan 4, Michael 2, Christina 1 ")
 
 # print out "welcome " + username + "."
 
+print ("Welcome " + username + ".")
+
 # print out the family information split by the ","
+
+print (family_information)
 
 # print out the family information split by the " "
 
+print (family_information.replace(",", " "))
+
 # tell the user what their full name would be if they changed their last name to "salmon"
+
+username2 = username.split(" ")
+username2.pop(1)
+username2.insert(1, "Salmon")
+print (username2[0] + " " + username2[1] + " " + username2[2])
 
 # strip away all the "," in the family informaiton and print it out.
 
+print (family_information.replace(",", " "))
