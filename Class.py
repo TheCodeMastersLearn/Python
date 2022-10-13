@@ -63,7 +63,64 @@
 
 
 # class
-
+class math:
+    def add(self, num1, num2):
+        if self.validate_numbers(num1, num2) == False:
+            return -1
+        sum = num1 + num2 
+        return sum
+    def subtract(self, num1, num2):
+        if self.validate_numbers(num1, num2) == False:
+            return -1
+        difference = num1 - num2 
+        return difference
+    def divide(self, num1, num2):
+        if self.validate_numbers(num1, num2) == False:
+            return -1
+        quotient = num1 / num2 
+        return quotient  
+    def multiply(self, num1, num2):
+        if self.validate_numbers(num1, num2) == False:
+            return -1
+        product = num1 * num2 
+        return product       
+    def validate_numbers(self, num1, num2):
+        if (type(num1) == float or type(num1) == int) and (type(num2) == float or type(num2) == int):
+            return True
+        else:
+            return False
+calculator = math()
+print ("Welcome to JuanTonSuey's most excellent calculator. I can Add, Subtract, Multiply and Divide. \
+ Be sure to enter your question correctly for Example: Multiply 2 and 3; Divide 22 by 2; Subtract 10 by 1; Add 2 and 4")
+question = input("Ask me to do Math. ")
+question = question.lower()
+question = question.split(" ")
+if question[0] == "multiply":
+    x1 = (calculator.multiply(float(question[1]),float(question[3])))
+    if x1 % 2 == 0:
+        print ("The Product is " + str(x1) + ". The answer is even.")
+    else:
+        print ("The Product is " + str(x1) + ". The answer is odd.")
+elif question[0] == "divide":
+    x1 = (calculator.divide(float(question[1]),float(question[3])))
+    if x1 % 2 == 0:
+        print ("The Quotient is " + str(x1) + ". The answer is even.")
+    else:
+        print ("The Quotient is " + str(x1) + ". The answer is odd.")
+elif question[0] == "add":
+    x1 = (calculator.add(float(question[1]),float(question[3])))
+    if x1 % 2 == 0:
+        print ("The Sum is " + str(x1) + ". The answer is even.")
+    else:
+        print ("The Sum is " + str(x1) + ". The answer is odd.")
+elif question[0] == "subtract":
+    x1 = (calculator.subtract(float(question[1]),float(question[3])))
+    if x1 % 2 == 0:
+        print ("The Difference is " + str(x1) + ". The answer is even.")
+    else:
+        print ("The Difference is " + str(x1) + ". The answer is odd.")                
+else:
+    print ("Did you spell everything correct?")
 
 # init (constructor)
 
